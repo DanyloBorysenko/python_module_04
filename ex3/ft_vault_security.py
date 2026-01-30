@@ -7,22 +7,22 @@ def vault_security() -> None:
     print("Initiating secure vault access...")
 
     try:
-        with open("classified_data.txt", "r+") as file:
+        with open("classified_data.txt", "r") as file:
             print("Vault connection established with failsafe protocols")
 
             print("\nSECURE EXTRACTION:")
             print(file.read())
+        
+        print()
 
-            print()
-
+        with open("classified_datagg.txt", "w") as file:
             print("SECURE PRESERVATION:")
             data: str = ("[CLASSIFIED] New security protocols archived")
             file.write(data)
             print(data)
         print("Vault automatically sealed upon completion\n")
     except OSError:
-        sys.stderr.write(("Error occured during read-write operation "
-                          "execution with file 'classified_data.txt'\n"))
+        sys.stderr.write("ERROR: Vault security operation failed.\n")
     else:
         print("All vault operations completed with maximum security.")
 
