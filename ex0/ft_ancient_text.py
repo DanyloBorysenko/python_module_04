@@ -3,8 +3,8 @@ def data_recovery() -> None:
     print()
     print("Accessing Storage Vault: ancient_fragment.txt")
     try:
-        # file = open("ancient_fragment.txt")
-        with open("ancient_fragment.txt") as file:
+        # file = open("ancient_fragment.txt", "r")
+        with open("ancient_fragment.txt", "r") as file:
             print("Connection established...\n")
             print("RECOVERED DATA:")
             print(file.read())

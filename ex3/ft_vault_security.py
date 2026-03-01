@@ -12,10 +12,11 @@ def vault_security() -> None:
 
             print("\nSECURE EXTRACTION:")
             print(file.read())
-        
+
         print()
 
-        with open("classified_datagg.txt", "w") as file:
+        # with open("classified_data.txt", "w") as file:
+        with open("security_protocols.txt", "w") as file:
             print("SECURE PRESERVATION:")
             data: str = ("[CLASSIFIED] New security protocols archived")
             file.write(data)
